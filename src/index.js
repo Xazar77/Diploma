@@ -16,3 +16,5 @@ slider();
 timer('26 january 2022');
 swiper();
 form('.form-horizontal');
+form('[name=callback-form]');
+form('[name=application-form]');

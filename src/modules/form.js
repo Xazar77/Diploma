@@ -4,9 +4,7 @@ import { validate } from "./helper";
 const form = (formId) => {
 
     const forms = document.querySelectorAll(formId);
-    // const input = form[0].querySelectorAll('input');
-    // console.log(input);
-    // console.log(form[0]);
+    
 
     const statusBlock = document.createElement('div'),
         statusImg = document.createElement('img');
@@ -93,77 +91,6 @@ const form = (formId) => {
 
     
 
-    // const submitForm = (form) => {
-    //     const formElements = form.querySelectorAll('input');
-    //     console.log(formElements);
-    //     const formData = new FormData(form);
-    //     const formBody = {};
-
-        
-    //     statusImg.src = loadText;
-    //     form.append(statusImg);
-    //     form.append(statusBlock);
-
-    //     formData.forEach((val, key) => {
-    //         formBody[key] = val;
-    //     });
-    //     someElement.forEach(elem => {
-    //         const element = document.getElementById(elem.id);
-
-
-    //         if (elem.type === 'block') {
-    //             formBody[elem.id] = element.textContent;
-    //         } else if (elem.type === 'input') {
-    //             formBody[elem.id] = element.value;
-    //         }
-
-    //     });
-
-
-    //     if (validate(formElements)) {
-    //         sendData(formBody)
-    //             .then(data => {
-    //                 statusBlock.textContent = successText;
-    //                 statusImg.src = '';
-                   
-    //                 formElements.forEach(input => {
-    //                     input.value = '';
-                        
-    //                 });
-                    
-    //             })
-    //             .catch(error => {
-    //                 statusBlock.textContent = errorText;
-    //             });
-
-    //     } else {
-
-
-    //         alert('Данные не валидны!!!!');
-    //         // statusBlock.textContent = errorText;
-    //         // statusImg.src = '';
-    //     }
-    // };
-
-    
-    // const formListener = (form) => {
-    //     try {
-    //         if (!form) {
-    //             throw new Error('Верните форму на место!!!');
-    //         }
-    //         form.addEventListener('submit', (e) => {
-    //             e.preventDefault();
-    //             statusBlock.textContent = '';
-    //             submitForm(form[0]);
-
-
-    //         });
-    //     } catch (error) {
-    //         console.log(error.message);
-    //     }
-    // };
-    // formListener(form[0]);
-    // formListener(form2, someElement2);
     
 
 
