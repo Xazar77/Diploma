@@ -14,5 +14,5 @@ modalRequest();
 modalFroze();
 slider();
 timer('26 january 2022');
-// swiper();
+swiper();
 form('.form-horizontal');
