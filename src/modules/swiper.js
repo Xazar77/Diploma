@@ -1,57 +1,37 @@
 
+
 import Swiper, { Autoplay, Navigation } from 'swiper';
 
 Swiper.use([Autoplay]);
 Swiper.use([Navigation]);
 
-
 const swiper = () => {
-    const width = 576;
-    // const breakpoints = {
-    //     width: width,
-    //     slidesPerView: slidesPerView,
-    //     spaceBetween: spaceBetween,
-    //     showBreaakpoints: function () {
-    //         if (this.width < 576) {
-    //             this.slidesPerView = 1;
-    //             this.spaceBetween = 20 + 'px';
-    //         } else if (this.width > 576) {
-    //             this.slidesPerView = 3;
-    //             this.spaceBetween = 50 + 'px';
-    //         }
-    //     }
-    //     // 576:{
-    //     //     slidesPerView: 1,
-    //     //     spaceBetween: 20,
-    //     // },
-    //     // 1024: {
-    //     //     slidesPerView: 3,
-    //     //     spaceBetween: 50,
-    //     // }
-    // };
-
-
+    
     
     const swiper = new Swiper('.swiper', {
-        loop: true,
-        speed: 400,
+        speed: 200,
         slidesPerView: 1,
-        spaceBetween: 10,
-        centeredSlides: true,
+        spaceBetween: 100,
+        // centeredSlides: true,
         autoplay: {
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         },
         breakpoints: {
-            
-            576: {
+            50: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 200,
             },
-            1024: {
+            576: {
                 slidesPerView: 3,
-                spaceBetween: 50,
-            }
+                spaceBetween: 100,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 200,
+                
+            },
+           
         },
         navigation: {
             nextEl: '.benefits__arrow--right',
