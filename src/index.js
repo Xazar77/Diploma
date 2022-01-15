@@ -24,3 +24,4 @@ swiper();
 //     }],
 // });
 smoothScroll();
+form('.form-horizontal');
