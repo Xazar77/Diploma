@@ -1,14 +1,16 @@
 
-import { form } from './modules/form';
-import { modal } from './modules/modal';
-import { slider } from './modules/slider';
-import { timer } from './modules/timer';
+import modalRequest from './modules/modalRequest';
+import modalFroze from './modules/modalFroze';
+import slider from './modules/slider';
+import timer from './modules/timer';
+import swiper from './modules/swiper';
 
 
 
 
 
-form();
-modal();
+modalRequest();
+modalFroze();
 slider();
-timer();
+timer('26 january 2022');
+swiper();
