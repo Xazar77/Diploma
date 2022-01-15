@@ -14,11 +14,5 @@ modalRequest();
 modalFroze();
 slider();
 timer('26 january 2022');
-swiper();
-form({
-    formId: '.order-form', 
-    someElement: [{
-        type: 'block',
-        id: 'total'
-    }],
-});
+// swiper();
+form('.form-horizontal');
