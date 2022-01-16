@@ -6,7 +6,8 @@ const timer = (deadline) => {
     const timerDay = document.querySelectorAll('.count_1 span'),
         timerHours = document.querySelectorAll('.count_2 span'),
         timerMinutes = document.querySelectorAll('.count_3 span'),
-        timerSeconds = document.querySelectorAll('.count_4 span');
+        timerSeconds = document.querySelectorAll('.count_4 span'),
+        countdownText = document.querySelector('.countdown-text');
     
 
 
@@ -59,15 +60,27 @@ const timer = (deadline) => {
 
     };
     updateClock();
+    let getTime = getTimeRemaining();
+    if (getTime.timeRemaining <= 0) {
+        countdownText.textContent = 'Акция закончилась!';
+        countdownText.style.cssText = `
+            color: red;
+            font-size: 20px;
+        `;
+    }
 
     idInterval = setInterval(() => {
-        let getTime = getTimeRemaining();
-        
+        getTime = getTimeRemaining();
+              
         if (getTime.timeRemaining > 0) {
             updateClock();
         } else  if (getTime.timeRemaining <= 0) {
             clearInterval(idInterval);
-
+            // countdownText.textContent = 'Акция закончилась!';
+            // countdownText.getElementsByClassName.cssText = `
+            //     color: red;
+            //     font-size: 20px;
+            // `;
         }
     }, 1000);
 

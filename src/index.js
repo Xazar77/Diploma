@@ -15,7 +15,7 @@ import sertificate from './modules/sertificate';
 modalRequest();
 modalFroze();
 slider();
-timer('26 january 2022');
+timer('16 january 2022');
 swiper();
 
 smoothScroll();
