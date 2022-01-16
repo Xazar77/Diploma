@@ -4,9 +4,9 @@ import { validate } from "./helper";
 const form = (formId) => {
 
     const forms = document.querySelectorAll(formId);
-    // const input = form[0].querySelectorAll('input');
-    // console.log(input);
-    // console.log(form[0]);
+    const element = document.getElementById('calc-total');
+    
+  
 
     const statusBlock = document.createElement('div'),
         statusImg = document.createElement('img');
@@ -50,7 +50,7 @@ const form = (formId) => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const inputList = form.querySelectorAll('input');
-                
+                // console.log(element.placeholder);
                 const formData = new FormData(form);
                 const formBody = {};
 
@@ -62,6 +62,14 @@ const form = (formId) => {
                 formData.forEach((val, key) => {
                     formBody[key] = val;
                 });
+                
+                let total = 'Итого за работу:';
+                if (element.placeholder) {
+                    formBody[total] = element.placeholder; 
+                } 
+               
+               
+        
 
                 if (validate(inputList)) {
                     sendData(formBody)

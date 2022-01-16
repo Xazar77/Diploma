@@ -7,6 +7,8 @@ import swiper from './modules/swiper';
 import form from './modules/form';
 import smoothScroll from './modules/smoothScroll';
 import sertificate from './modules/sertificate';
+import calk from './modules/calc';
+import calc from './modules/calc';
 
 
 
@@ -15,11 +17,19 @@ import sertificate from './modules/sertificate';
 modalRequest();
 modalFroze();
 slider();
-timer('16 january 2022');
+timer('26 january 2022');
 swiper();
 
 smoothScroll();
-form('.form-horizontal');
+sertificate();
+calc();
 form('[name=callback-form]');
 form('[name=application-form]');
-sertificate();
+form('.form-horizontal');
+// form(
+//      '.form-horizontal',
+//     someElement = [{
+//         type: 'input',
+//         id: 'calcTotal'
+//     }]
+// );
