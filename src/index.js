@@ -7,7 +7,7 @@ import swiper from './modules/swiper';
 import form from './modules/form';
 import smoothScroll from './modules/smoothScroll';
 import sertificate from './modules/sertificate';
-import calk from './modules/calc';
+import mobile from './modules/mobile';
 import calc from './modules/calc';
 
 
@@ -26,10 +26,4 @@ calc();
 form('[name=callback-form]');
 form('[name=application-form]');
 form('.form-horizontal');
-// form(
-//      '.form-horizontal',
-//     someElement = [{
-//         type: 'input',
-//         id: 'calcTotal'
-//     }]
-// );
+mobile();

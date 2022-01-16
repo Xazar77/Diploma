@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalRequest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalRequest */ \"./modules/modalRequest.js\");\n/* harmony import */ var _modules_modalFroze__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modalFroze */ \"./modules/modalFroze.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/timer */ \"./modules/timer.js\");\n/* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/swiper */ \"./modules/swiper.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form */ \"./modules/form.js\");\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/smoothScroll'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/sertificate'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/calc'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_modalRequest__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_modalFroze__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('26 january 2022');\r\n(0,_modules_swiper__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\r\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/smoothScroll'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();\r\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/sertificate'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();\r\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './modules/calc'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])('[name=callback-form]');\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])('[name=application-form]');\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])('.form-horizontal');\r\n// form(\r\n//      '.form-horizontal',\r\n//     someElement = [{\r\n//         type: 'input',\r\n//         id: 'calcTotal'\r\n//     }]\r\n// );\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalRequest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalRequest */ \"./modules/modalRequest.js\");\n/* harmony import */ var _modules_modalFroze__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modalFroze */ \"./modules/modalFroze.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/timer */ \"./modules/timer.js\");\n/* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/swiper */ \"./modules/swiper.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form */ \"./modules/form.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./modules/smoothScroll.js\");\n/* harmony import */ var _modules_sertificate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/sertificate */ \"./modules/sertificate.js\");\n/* harmony import */ var _modules_mobile__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/mobile */ \"./modules/mobile.js\");\n/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/calc */ \"./modules/calc.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_modalRequest__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_modalFroze__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('26 january 2022');\r\n(0,_modules_swiper__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\r\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\n(0,_modules_sertificate__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\r\n(0,_modules_calc__WEBPACK_IMPORTED_MODULE_9__[\"default\"])();\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])('[name=callback-form]');\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])('[name=application-form]');\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])('.form-horizontal');\r\n(0,_modules_mobile__WEBPACK_IMPORTED_MODULE_8__[\"default\"])();\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/calc.js":
+/*!*************************!*\
+  !*** ./modules/calc.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helper */ \"./modules/helper.js\");\n\r\n\r\nconst calc = () => {\r\n\r\n\r\n    const calcType = document.getElementById('calc-type'),\r\n          calcTypeMaterial = document.getElementById('calc-type-material'),\r\n          calcSquare = document.getElementById('calc-input'),\r\n          calcTotal = document.getElementById('calc-total'),\r\n          calcBlock = document.getElementById('calc');\r\n    \r\n    \r\n   \r\n    \r\n    let interval;\r\n    let totalValue = 0;\r\n\r\n    // const checkInput = (input) => {\r\n        \r\n    // };\r\n    // checkInput(calcSquare);\r\n    \r\n    const countCalc = () => {\r\n       \r\n        const calcTypeValue = +calcType.options[calcType.selectedIndex].value;\r\n        const calcTypeMaterialValue = +calcTypeMaterial.options[calcTypeMaterial.selectedIndex].value;\r\n        calcSquare.addEventListener('input', (e) => {\r\n            calcSquare.value = e.target.value.replace(/\\D+/, '');\r\n            \r\n        });\r\n        const calcSquareValue = calcSquare.value;\r\n       \r\n        if (calcTypeValue && calcTypeMaterialValue && calcSquareValue) {\r\n            totalValue = calcSquareValue * calcTypeValue * calcTypeMaterialValue;\r\n            \r\n        } else {\r\n            totalValue = 0;\r\n        }\r\n        \r\n        return totalValue;\r\n        \r\n    };\r\n    \r\n    \r\n    if (calcBlock) {\r\n        calcBlock.addEventListener('input', (e) => {\r\n            if (e.target === calcType || e.target === calcTypeMaterial || e.target === calcSquare) {\r\n                 \r\n                clearTimeout(interval);\r\n                    \r\n                countCalc();\r\n                \r\n                \r\n                const time = 1000; // время отводимое на перебор цифр\r\n                const step = 100; // шаг перебора\r\n                let n = 0; // число отсчитывается от нуля\r\n                let t = Math.round(time / +totalValue / step);\r\n    \r\n                if (totalValue != 0) {\r\n                    \r\n                    interval = setTimeout(() => {\r\n                        (0,_helper__WEBPACK_IMPORTED_MODULE_0__.animate)({\r\n                            duration: 500,\r\n                            timing(timeFraction) {\r\n                                return timeFraction;\r\n                            },\r\n                            draw(progress) {\r\n                                calcTotal.placeholder = Math.round(progress * totalValue) + '₽';\r\n                            }\r\n                        });\r\n                    }, 200);\r\n                }\r\n                \r\n            }\r\n        });\r\n    }\r\n\r\n    \r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calc);\n\n//# sourceURL=webpack:///./modules/calc.js?");
 
 /***/ }),
 
@@ -40,6 +50,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./modules/mobile.js":
+/*!***************************!*\
+  !*** ./modules/mobile.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst mobile = () => {\r\n    const menuTag = document.getElementById(\"navbar-collapse\");\r\n    const body = document.querySelector(\"body\");\r\n\r\n    body.addEventListener('click', (e) => {\r\n        if (e.target.closest(\".navbar-toggle.collapsed\")){\r\n            menuTag.classList.toggle(\"collapse\");\r\n        }});\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mobile);\n\n//# sourceURL=webpack:///./modules/mobile.js?");
+
+/***/ }),
+
 /***/ "./modules/modalFroze.js":
 /*!*******************************!*\
   !*** ./modules/modalFroze.js ***!
@@ -60,6 +80,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./modules/sertificate.js":
+/*!********************************!*\
+  !*** ./modules/sertificate.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst sertificate = () => {\r\n\r\n    const sertificateDocument = document.querySelectorAll('.sertificate-document');\r\n\r\n    sertificateDocument.forEach(doc => {\r\n        doc.addEventListener('mouseover', () => {\r\n            doc.style.opacity = 1;\r\n            // console.log('YES');\r\n        });\r\n        doc.addEventListener('mouseout', () => {\r\n            doc.style.opacity = 0;\r\n            // console.log('NO');\r\n        });\r\n    });\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sertificate);\n\n//# sourceURL=webpack:///./modules/sertificate.js?");
+
+/***/ }),
+
 /***/ "./modules/slider.js":
 /*!***************************!*\
   !*** ./modules/slider.js ***!
@@ -67,6 +97,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst slider = () => {\r\n\r\n    \r\n\r\n   \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack:///./modules/slider.js?");
+
+/***/ }),
+
+/***/ "./modules/smoothScroll.js":
+/*!*********************************!*\
+  !*** ./modules/smoothScroll.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\nconst smoothScroll = () => {\r\n\r\n    const scrollBtn = document.querySelector('.smooth-scroll');\r\n    scrollBtn.style.display = 'none';  \r\n    window.addEventListener('scroll', (e) => {\r\n        if (window.scrollY > 400) {\r\n            scrollBtn.style.display = 'block';\r\n        } else {\r\n            scrollBtn.style.display = 'none';\r\n        }\r\n    });\r\n   \r\n    scrollBtn.addEventListener(\"click\", (e) => {\r\n        e.preventDefault();\r\n       \r\n        document.getElementById('header').scrollIntoView({\r\n        behavior: \"smooth\",\r\n        block: \"start\",\r\n        });\r\n        \r\n        \r\n    });\r\n  \r\n\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScroll);\n\n//# sourceURL=webpack:///./modules/smoothScroll.js?");
 
 /***/ }),
 
