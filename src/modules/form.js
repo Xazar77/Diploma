@@ -4,7 +4,7 @@ import { validate } from "./helper";
 const form = (formId) => {
 
     const forms = document.querySelectorAll(formId);
-    const element = document.getElementById('calc-total');
+    
     
   
 
@@ -62,12 +62,13 @@ const form = (formId) => {
                 formData.forEach((val, key) => {
                     formBody[key] = val;
                 });
-                
-                let total = 'Итого за работу:';
-                if (element.placeholder) {
-                    formBody[total] = element.placeholder; 
-                } 
-               
+                if(document.getElementById('calc-total')) {
+                    const element = document.getElementById('calc-total');
+                    let total = 'Итого за работу:';
+                    if (element.placeholder) {
+                        formBody[total] = element.placeholder; 
+                    } 
+                }
                
         
 
