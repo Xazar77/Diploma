@@ -6,6 +6,7 @@ import timer from './modules/timer';
 import swiper from './modules/swiper';
 import form from './modules/form';
 import smoothScroll from './modules/smoothScroll';
+import sertificate from './modules/sertificate';
 
 
 
@@ -21,3 +22,4 @@ smoothScroll();
 form('.form-horizontal');
 form('[name=callback-form]');
 form('[name=application-form]');
+sertificate();

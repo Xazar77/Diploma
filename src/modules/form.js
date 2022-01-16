@@ -81,7 +81,7 @@ const form = (formId) => {
                 } else {
                     alert('Данные не валидны!!!!');
                     statusBlock.textContent = '';
-                    
+                    statusImg.src = '';
                 }
             });
         }catch (error) {

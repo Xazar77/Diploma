@@ -13,7 +13,7 @@ const smoothScroll = () => {
    
     scrollBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(e.target)
+       
         document.getElementById('header').scrollIntoView({
         behavior: "smooth",
         block: "start",
