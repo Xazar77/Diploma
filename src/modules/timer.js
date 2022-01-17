@@ -7,11 +7,7 @@ const timer = (deadline) => {
         timerHours = document.querySelectorAll('.count_2 span'),
         timerMinutes = document.querySelectorAll('.count_3 span'),
         timerSeconds = document.querySelectorAll('.count_4 span'),
-        countdownText = document.querySelector('.countdown-text');
-    
-
-
-
+        countdownText = document.querySelectorAll('.countdown-text');
 
     let idInterval;
 
@@ -26,9 +22,8 @@ const timer = (deadline) => {
         let hours = Math.floor(timeRemaining / (60 * 60) % 24); // 3. из минут получаем часы
         let minutes = Math.floor((timeRemaining / 60) % 60); // 2. из секунд получаем минуты
         let seconds = Math.floor(timeRemaining % 60); // 1. округляем полученное количество милисекунд до целочисленного
-  
+
         return { timeRemaining, day, hours, minutes, seconds};
-     
    
     };
 
@@ -43,44 +38,42 @@ const timer = (deadline) => {
 
     const updateClock = () => {
         let getTime = getTimeRemaining();
-
-        timerDay[0].textContent = getZero(getTime.day);
-        timerHours[0].textContent = getZero(getTime.hours);
-        timerMinutes[0].textContent = getZero(getTime.minutes);
-        timerSeconds[0].textContent = getZero(getTime.seconds);
-    
-        timerDay[1].textContent = getZero(getTime.day);
-        timerHours[1].textContent = getZero(getTime.hours);
-        timerMinutes[1].textContent = getZero(getTime.minutes);
-        timerSeconds[1].textContent = getZero(getTime.seconds);
-  
-
-
-
+        if (getTime.timeRemaining > 0) {
+            timerDay[0].textContent = getZero(getTime.day);
+            timerHours[0].textContent = getZero(getTime.hours);
+            timerMinutes[0].textContent = getZero(getTime.minutes);
+            timerSeconds[0].textContent = getZero(getTime.seconds);
+        
+            timerDay[1].textContent = getZero(getTime.day);
+            timerHours[1].textContent = getZero(getTime.hours);
+            timerMinutes[1].textContent = getZero(getTime.minutes);
+            timerSeconds[1].textContent = getZero(getTime.seconds);
+        } else {
+             countdownText.forEach(text => {
+                text.textContent = '';
+             
+            });
+        }
 
     };
     updateClock();
-    let getTime = getTimeRemaining();
-    if (getTime.timeRemaining <= 0) {
-        countdownText.textContent = 'Акция закончилась!';
-        countdownText.style.cssText = `
-            color: red;
-            font-size: 20px;
-        `;
-    }
+   
 
     idInterval = setInterval(() => {
-        getTime = getTimeRemaining();
+       let getTime = getTimeRemaining();
               
         if (getTime.timeRemaining > 0) {
             updateClock();
         } else  if (getTime.timeRemaining <= 0) {
             clearInterval(idInterval);
-            // countdownText.textContent = 'Акция закончилась!';
-            // countdownText.getElementsByClassName.cssText = `
-            //     color: red;
-            //     font-size: 20px;
-            // `;
+            countdownText.forEach(text => {
+                text.textContent = 'Акция закончилась!';
+                text.style.cssText = `
+                color: red;
+                font-size: 20px;
+            `;
+            });
+           
         }
     }, 1000);
 
