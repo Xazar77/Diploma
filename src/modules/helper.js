@@ -18,8 +18,7 @@ const validate = (list) => {
         if (input.closest('[name=fio]')) {
             ttext = input.closest('[name=fio]');
             ttext = ttext.value;
-            // console.log(ttext);
-            //.replace(/^[^а-яёa-z]{2,}$/i, '');
+           
         }
 
         if (input.closest('[name=phone]')) {
@@ -41,7 +40,7 @@ const validate = (list) => {
 
     if (ttext == ''  || pphohe == '' ) {
         success = false;
-        // alert('Заполните все поля!!!');
+        
     }
     if (ttext1 && pphone1) {
 
@@ -61,14 +60,14 @@ const animate = ({timing, draw, duration}) => {
     let start = performance.now();
 
     requestAnimationFrame(function animate(time) {
-        // timeFraction изменяется от 0 до 1
+        
         let timeFraction = (time - start) / duration;
         if (timeFraction > 1) timeFraction = 1;
 
-        // вычисление текущего состояния анимации
+        
         let progress = timing(timeFraction);
 
-        draw(progress); // отрисовать её
+        draw(progress); 
 
         if (timeFraction < 1) {
             requestAnimationFrame(animate);

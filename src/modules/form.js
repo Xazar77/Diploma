@@ -53,10 +53,10 @@ const form = (formId) => {
                 if (testPhone.test(e.target.value)) {
                     phone.value = e.target.value;
                 } else {
-                    phone.value = e.target.value.replace(/[а-яa-z]+/g, '').replace(/\-+/g, '-').replace(/[^\d\(\)\-\+]+/g, '').replace(/^[\-\s]+/gm, '').replace(/[\-\s]+$/gm, '');
+                    phone.value = e.target.value.replace(/[а-яa-z]+/g, '').replace(/\++/g, '+').replace(/[^\d\+]+/g, '');
                 }
 
-            });
+            });//.replace(/^[\-\s]+/gm, '').replace(/[\-\s]+$/gm, '')
 
         });
 
