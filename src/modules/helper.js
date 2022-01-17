@@ -18,6 +18,8 @@ const validate = (list) => {
         if (input.closest('[name=fio]')) {
             ttext = input.closest('[name=fio]');
             ttext = ttext.value;
+            // console.log(ttext);
+            //.replace(/^[^а-яёa-z]{2,}$/i, '');
         }
 
         if (input.closest('[name=phone]')) {
@@ -32,6 +34,7 @@ const validate = (list) => {
     
         
     ttext1 = testName.test(ttext);
+   
         
     pphone1 = testPhone.test(pphohe);
        

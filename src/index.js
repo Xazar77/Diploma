@@ -17,7 +17,7 @@ import calc from './modules/calc';
 modalRequest();
 modalFroze();
 slider();
-timer('17 january 2022 10:29:00.000');
+timer('17 january 2022 11:07:00.000');
 swiper();
 
 smoothScroll();
