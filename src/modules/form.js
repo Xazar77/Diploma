@@ -38,7 +38,7 @@ const form = (formId) => {
                 if (testText.test(e.target.value)) {
                     name.value = e.target.value;
                 } 
-                name.value = e.target.value.replace(/^[^а-яёa-z]+/gi, '');
+                name.value = e.target.value.replace(/^[^а-яёa-z]+/gi, '').replace(/[^а-яёa-z]+/gi, '').replace(/[^а-яёa-z]+$/gi, '');
             });
         });
     };
