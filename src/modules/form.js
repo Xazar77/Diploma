@@ -95,6 +95,7 @@ const form = (formId) => {
                 const formBody = {};
 
                 statusImg.src = loadText;
+                statusBlock.style.color = "grey";
                 
                 form.append(statusImg);
                 form.append(statusBlock);
@@ -134,7 +135,7 @@ const form = (formId) => {
                             statusBlock.textContent = errorText;
                         });
                 } else {
-                    alert('Данные не валидны!!!!');
+                    // alert('Данные не валидны!!!!');
                     statusBlock.textContent = '';
                     statusImg.src = '';
                    
