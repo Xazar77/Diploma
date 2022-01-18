@@ -43,6 +43,7 @@ const form = (formId) => {
                 }
                 name.value = e.target.value.replace(/^[^а-яёa-z]+/gi, '').replace(/[^а-яёa-z]+/gi, '').replace(/[^а-яёa-z]+$/gi, '');
                 
+                    
             });
         });
     };
@@ -59,6 +60,9 @@ const form = (formId) => {
                     phone.classList.remove('error');
                 } else {
                     phone.value = e.target.value.replace(/[а-яa-z]+/g, '').replace(/\++/g, '+').replace(/[^\d\+]+/g, '');
+                    phone.classList.add('error');
+                }
+                if (e.target.value == '') {
                     phone.classList.add('error');
                 }
 
@@ -90,10 +94,10 @@ const form = (formId) => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const inputList = form.querySelectorAll('input');
-               
+                
                 const formData = new FormData(form);
                 const formBody = {};
-
+                
                 statusImg.src = loadText;
                 statusBlock.style.color = "grey";
                 
@@ -103,6 +107,7 @@ const form = (formId) => {
                 formData.forEach((val, key) => {
                     formBody[key] = val;
                 });
+
                 if (document.getElementById('calc-total')) {
                     const element = document.getElementById('calc-total');
                     let total = 'Итого за работу:';
@@ -113,7 +118,14 @@ const form = (formId) => {
                         formBody[total] = element.placeholder;
                     }
                
-               }
+                }
+                inputList.forEach(input => {
+                    if (input.value == '') {
+                        input.classList.add('error');
+                    }
+                                
+                });
+
         
 
                 if (validate(inputList)) {
@@ -138,7 +150,7 @@ const form = (formId) => {
                     // alert('Данные не валидны!!!!');
                     statusBlock.textContent = '';
                     statusImg.src = '';
-                   
+                    
                 }
             });
         }catch (error) {

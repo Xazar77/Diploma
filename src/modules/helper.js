@@ -33,18 +33,27 @@ const validate = (list) => {
     
         
     ttext1 = testName.test(ttext);
-   
+//    if (ttext.value == '') {
+//        let inputText = input.closest('[name=fio]');
+//        inputText.classList.add('error');
+//     }
     
    
         
     pphone1 = testPhone.test(pphone);
-   
+//    if (pphone.value == '') {
+//        let inputPhohe = input.closest('[name=phone]');
+//        inputPhohe.classList.add('error');
+//     }
     
 
     if (ttext == ''  || pphone == '' ) {
         success = false;
         
     }
+   
+   
+
     if (ttext1 && pphone1) {
         list.forEach(input => {
             
