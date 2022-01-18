@@ -60,6 +60,9 @@ const sertificate = () => {
                         transform: translate(-50%, -50%);
                         object-fit: contain;
                         max-width: 90vw;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     `;
                 } else {
                     image.src = "images/documents/document4.jpg";
