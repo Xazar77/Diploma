@@ -7,7 +7,7 @@ const form = (formId) => {
     const inputName = document.querySelectorAll('[name=fio]');
     const inputPhone = document.querySelectorAll('[name=phone]');
    
-    
+    // console.log(forms);
     
   
 
@@ -32,13 +32,17 @@ const form = (formId) => {
     const validName = (list) => {
         list.forEach(name => {
             name.addEventListener('input', (e) => {
-
+                
                 let testText = /^[а-яёa-z]{2,}/gi;
 
                 if (testText.test(e.target.value)) {
                     name.value = e.target.value;
-                } 
+                    name.classList.remove('error');
+                } else {
+                    name.classList.add('error');
+                }
                 name.value = e.target.value.replace(/^[^а-яёa-z]+/gi, '').replace(/[^а-яёa-z]+/gi, '').replace(/[^а-яёa-z]+$/gi, '');
+                
             });
         });
     };
@@ -47,13 +51,15 @@ const form = (formId) => {
     const validPhone = (list) => {
         list.forEach(phone => {
             phone.addEventListener('input', (e) => {
-
+                
                 let testPhone = /^([+]?[0-9]{6,16})$/i;
-                console.log(testPhone.test(e.target.value));
+                
                 if (testPhone.test(e.target.value)) {
                     phone.value = e.target.value;
+                    phone.classList.remove('error');
                 } else {
                     phone.value = e.target.value.replace(/[а-яa-z]+/g, '').replace(/\++/g, '+').replace(/[^\d\+]+/g, '');
+                    phone.classList.add('error');
                 }
 
             });//.replace(/^[\-\s]+/gm, '').replace(/[\-\s]+$/gm, '')
@@ -84,7 +90,7 @@ const form = (formId) => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const inputList = form.querySelectorAll('input');
-                
+               
                 const formData = new FormData(form);
                 const formBody = {};
 
@@ -131,6 +137,7 @@ const form = (formId) => {
                     alert('Данные не валидны!!!!');
                     statusBlock.textContent = '';
                     statusImg.src = '';
+                   
                 }
             });
         }catch (error) {

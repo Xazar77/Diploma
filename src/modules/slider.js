@@ -14,7 +14,7 @@ const slider = () => {
 
     const showSlides = () => {
       arrSlide.forEach((slide, index) => {
-        if (document.documentElement.clientWidth > 576) {
+        if (document.documentElement.scrollWidth > 576) {
           if (index == 0 || index == 1) {
             slide.style.display = 'inline';
 
@@ -24,8 +24,10 @@ const slider = () => {
         } else {
           if (index == 0) {
             slide.style.display = 'inline';
+            // slide.style.height = 'auto';
           } else {
             slide.style.display = 'none';
+            // slide.style.height = 'auto';
           }
         }
       });
@@ -44,7 +46,7 @@ const slider = () => {
      
       if (e.target.closest('.services__arrow--right')) {
         
-        arrSlide.forEach((item, index) => {
+        arrSlide.forEach(item => {
           
 
           if (item.style.display === 'inline') {
@@ -57,11 +59,8 @@ const slider = () => {
       }
       if (e.target.closest(".services__arrow--left")) {
         
-        arrSlide = arrSlide.reverse()
-        arrSlide.forEach((item, index) => {
-          
-          
-          
+        arrSlide = arrSlide.reverse();
+        arrSlide.forEach(item => {
           if (item.style.display === 'none') {
             item.style.display = 'inline';
           } else {

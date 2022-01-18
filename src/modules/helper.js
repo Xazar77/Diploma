@@ -10,7 +10,7 @@ const validate = (list) => {
     let ttext;
     let ttext1;
 
-    let pphohe;
+    let pphone;
     let pphone1;
 
     list.forEach(input => {
@@ -18,35 +18,44 @@ const validate = (list) => {
         if (input.closest('[name=fio]')) {
             ttext = input.closest('[name=fio]');
             ttext = ttext.value;
-           
+            
         }
 
         if (input.closest('[name=phone]')) {
-            pphohe = input.closest('[name=phone]');
-            pphohe = pphohe.value;
-          
+            pphone = input.closest('[name=phone]');
+            pphone = pphone.value;
+            
+                
         }
+           
         
-
-
     });
     
         
     ttext1 = testName.test(ttext);
    
+    
+   
         
-    pphone1 = testPhone.test(pphohe);
-       
+    pphone1 = testPhone.test(pphone);
+   
+    
 
-    if (ttext == ''  || pphohe == '' ) {
+    if (ttext == ''  || pphone == '' ) {
         success = false;
         
     }
     if (ttext1 && pphone1) {
+        list.forEach(input => {
+            
+            input.classList.remove('error');
+            
+        });
 
         success = true;
         
-    } 
+    }
+    
 
     return success;
 };

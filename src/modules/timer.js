@@ -39,22 +39,18 @@ const timer = (deadline) => {
     const updateClock = () => {
         let getTime = getTimeRemaining();
         if (getTime.timeRemaining > 0) {
-            timerDay[0].textContent = getZero(getTime.day);
-            timerHours[0].textContent = getZero(getTime.hours);
-            timerMinutes[0].textContent = getZero(getTime.minutes);
-            timerSeconds[0].textContent = getZero(getTime.seconds);
-        
-            timerDay[1].textContent = getZero(getTime.day);
-            timerHours[1].textContent = getZero(getTime.hours);
-            timerMinutes[1].textContent = getZero(getTime.minutes);
-            timerSeconds[1].textContent = getZero(getTime.seconds);
-        } else {
-             countdownText.forEach(text => {
-                text.textContent = '';
-             
-            });
-        }
 
+            for (let i = 0; i <= 1; i++) {
+                timerDay[i].textContent = getZero(getTime.day);
+                timerHours[i].textContent = getZero(getTime.hours);
+                timerMinutes[i].textContent = getZero(getTime.minutes);
+                timerSeconds[i].textContent = getZero(getTime.seconds);
+            }
+            
+        
+            
+        }
+        
     };
     updateClock();
    
@@ -66,13 +62,13 @@ const timer = (deadline) => {
             updateClock();
         } else  if (getTime.timeRemaining <= 0) {
             clearInterval(idInterval);
-            countdownText.forEach(text => {
-                text.textContent = 'Акция закончилась!';
-                text.style.cssText = `
-                color: red;
-                font-size: 20px;
-            `;
-            });
+            // countdownText.forEach(text => {
+            //     text.textContent = 'Акция закончилась!';
+            //     text.style.cssText = `
+            //     color: red;
+            //     font-size: 20px;
+            // `;
+            // });
            
         }
     }, 1000);
