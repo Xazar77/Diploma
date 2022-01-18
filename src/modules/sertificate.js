@@ -51,11 +51,15 @@ const sertificate = () => {
                 if (overlayOpened) {
                     image.src = "images/documents/original/document4.jpg";
                     image.style.cssText = `
+                       
                         position: fixed;
                         z-index: 2;
-                        top: -100px;
-                        left: 30%;
-                        transform: scale(0.8);
+                        height: 90vh;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        object-fit: contain;
+                        max-width: 90vw;
                     `;
                 } else {
                     image.src = "images/documents/document4.jpg";
