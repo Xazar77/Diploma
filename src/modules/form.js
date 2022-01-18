@@ -23,7 +23,7 @@ const form = (formId) => {
     `;
         
     statusImg.style.cssText = `
-        color: yellow;
+        
         display: block;
         margin: 0 auto;
         text-align:center;
@@ -99,7 +99,7 @@ const form = (formId) => {
                 const formBody = {};
                 
                 statusImg.src = loadText;
-                statusBlock.style.color = "grey";
+                // statusBlock.style.color = "grey";
                 
                 form.append(statusImg);
                 form.append(statusBlock);
