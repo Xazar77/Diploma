@@ -9,6 +9,7 @@ import smoothScroll from './modules/smoothScroll';
 import sertificate from './modules/sertificate';
 import mobile from './modules/mobile';
 import calc from './modules/calc';
+import reviews from './modules/reviews';
 
 
 
@@ -27,3 +28,4 @@ form('[name=callback-form]');
 form('[name=application-form]');
 form('.form-horizontal');
 mobile();
+reviews()
