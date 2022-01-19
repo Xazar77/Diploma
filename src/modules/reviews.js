@@ -10,8 +10,13 @@ const reviews = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                let arr = data.comments;
-                renderComment(arr);
+                const { comments } = data;
+                renderItemArr = comments;
+                renderComment(renderItemArr);
+                setInterval(() => {
+                    showReviews();
+                }, 1000);
+            
                 // console.log(data)
             })
             .catch(error => console.log(error));
@@ -90,8 +95,8 @@ const reviews = () => {
                 `;
             }
           
-            renderItemArr.push(item);
-            localStorage.setItem('comment', JSON.stringify(renderItemArr));
+            // renderItemArr.push(item);
+            // localStorage.setItem('comment', JSON.stringify(renderItemArr));
             blockComment.append(div);
             
         });
@@ -100,19 +105,24 @@ const reviews = () => {
 
 
     function showReviews() {
-        const userArr = JSON.parse(localStorage.getItem('comment'));
-        console.log(userArr);
+        // const userArr = JSON.parse(localStorage.getItem('comment'));
+        // console.log(userArr);
        
-        const newArr = userArr.map((item) => {
+        // renderItemArr.forEach((item, id) => {
             // console.log(item);
-            if (item.id == 0) {
-                let eee = userArr.shift(item.id);
-                userArr.push(eee);
-                renderComment(userArr)
-            }
-            return item;
+            // if (id == 0) {
+            //     let eee = renderItemArr.shift(id);
+            //     renderItemArr.push(eee);
+            //     renderComment(renderItemArr)
+            // //     return renderItemArr;
+            // }
+        // })
 
-        })
+
+        const item = renderItemArr.shift(renderItemArr[0]);
+        renderItemArr.push(item);
+        // renderComment(renderItemArr)
+        // console.log(renderItemArr)
 
         // 
         // console.log(newArr);
@@ -145,8 +155,6 @@ const reviews = () => {
     }
 
     // showReviews();
-    
-        
 
 
 };
