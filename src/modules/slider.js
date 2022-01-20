@@ -6,9 +6,10 @@ const slider = () => {
           const slides = container.querySelectorAll('.row .col-md-12');
           let startCounter = 0;
           let endCounter = 1;
+          let width = document.documentElement.clientWidth;
+          let count = width > 576 ? 2 : 1;
+          //  console.log(count);
 
-          let count = window.innerWidth > 576 ? 2 : 1;
-          // console.log(count);
         
           let arrSlide = Array.from(slides);
           
@@ -16,7 +17,7 @@ const slider = () => {
 
             const showSlides = () => {
               arrSlide.forEach((slide, index) => {
-                if (window.innerWidth > 576) {
+                if (width > 576) {
                   if (index == startCounter || index == endCounter) {
                     slide.style.display = 'inline';
 
@@ -39,15 +40,19 @@ const slider = () => {
             showSlides();
 
             window.addEventListener('resize', () => {
+              width = document.documentElement.clientWidth;
+              count = width > 576 ? 2 : 1;
               showSlides();
+              // console.log(count);
+              
+
             });
 
             sliderLine.addEventListener('click', (e) => {
               e.preventDefault();
-
             
               if (e.target.closest('.services__arrow--right')) {
-
+                // console.log(count, 'RIGHT');
                 if(startCounter >= arrSlide.length - count) {
                   startCounter = 0;
                   // console.log('startCounter = 0')
@@ -55,10 +60,8 @@ const slider = () => {
                   startCounter += count;
                   // console.log(startCounter,'startCounter')
                 }
-                
 
-
-                if(endCounter >= arrSlide.length - count) {
+                if (endCounter >= arrSlide.length - count) {
                   endCounter = 1;
                   // console.log('endCounter = 1')
                 }else{
@@ -69,7 +72,7 @@ const slider = () => {
 
 
               if (e.target.closest(".services__arrow--left")) {
-                
+                // console.log(count, 'LEFT');
                 if(startCounter <= count - 1) {
                   startCounter = arrSlide.length - count;
                   // console.log(startCounter,'startCounter')
@@ -86,10 +89,8 @@ const slider = () => {
                   endCounter -= count;
                   // console.log(endCounter,'endCounter')
                 }
-                
-              
               }
-
+              
               
               showSlides();
             });

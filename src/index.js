@@ -28,4 +28,4 @@ form('[name=callback-form]');
 form('[name=application-form]');
 form('.form-horizontal');
 mobile();
-reviews()
+// reviews();

@@ -2,19 +2,30 @@ const reviews = () => {
 
     const reviews = document.getElementById('reviews');
     const blockComment = reviews.querySelector('.row');
-    
-    let renderItemArr = [];
+    let timer;
+    // let renderItemArr = [];
     // console.log(renderItemArr)
 
     const getData = (url) => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                const { comments } = data;
-                renderItemArr = comments;
-                renderComment(renderItemArr);
-                setInterval(() => {
-                    showReviews();
+                console.log(data)
+                const {comments} = data
+                
+                //  let renderItemArr = data.comments;
+                // console.log(renderItemArr)
+                // showReviews(comments);
+                // renderItemArr.push(arr);
+                // console.log(renderItemArr)
+                // arr.forEach(item => {
+                //     console.log(item)
+                //     renderItemArr.push(item);
+                // });
+                
+                // renderComment(renderItemArr);
+               timer = setInterval(() => {
+                    showReviews(comments);
                 }, 1000);
             
                 // console.log(data)
@@ -27,22 +38,22 @@ const reviews = () => {
 
     const renderComment = (data) => {
         
-        // console.log(arr);
+        console.log(data);
         data.forEach((item, index) => {
-            // console.log(index)
+            // console.log(item)
             let { id, image, author, comment } = item;
             // console.log(image);
             if (image == '') {
-                image = "face2.png";
+                image = "avatar.png";
             }
             const div = document.createElement('div');
             div.classList.add('col-sm-offset-1');
             div.classList.add('col-xs-12');
             div.classList.add('comments-container');
             
-            // if (id > 2) {
-            //     div.classList.add('hidden');
-            // }
+            if (index > 2) {
+                div.classList.add('hidden');
+            }
             if (index == 0) {
                 div.innerHTML = `
                 <div class="review-margin-bottom row comment-item  ">
@@ -98,60 +109,23 @@ const reviews = () => {
             // renderItemArr.push(item);
             // localStorage.setItem('comment', JSON.stringify(renderItemArr));
             blockComment.append(div);
-            
+            clearInterval(timer);
         });
         
     };
 
 
-    function showReviews() {
-        // const userArr = JSON.parse(localStorage.getItem('comment'));
-        // console.log(userArr);
-       
-        // renderItemArr.forEach((item, id) => {
-            // console.log(item);
-            // if (id == 0) {
-            //     let eee = renderItemArr.shift(id);
-            //     renderItemArr.push(eee);
-            //     renderComment(renderItemArr)
-            // //     return renderItemArr;
-            // }
-        // })
-
-
-        const item = renderItemArr.shift(renderItemArr[0]);
-        renderItemArr.push(item);
-        // renderComment(renderItemArr)
-        // console.log(renderItemArr)
-
-        // 
-        // console.log(newArr);
-        // renderComment(userArr);
-        // setInterval(() => {
-        //     let elem = userArr.shift();
+    function showReviews(data) {
             
-        // }, 1000);
-        //     // renderComment(userArr);
-        //    renderItemArr.push(elem);
+        
 
-
-
-        // userArr.forEach((elem, index) => {
-
-        //     // console.log(elem);
-        //     // console.log(index);
-            
-        // let arr = [2, 3, 54, 4, 5, 23, 27, 77];
-        // console.log(arr);
-        // let el = arr.shift();
-        // console.log(arr);
-        // arr.push(el);
-        // console.log(arr);
-
-
-
-        // });
+        const item = data.shift(data[0]);
+        // console.log(item)
+        data.push(item);
+       console.log(data);
+                renderComment(data);
        
+                
     }
 
     // showReviews();
