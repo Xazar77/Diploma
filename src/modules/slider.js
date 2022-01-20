@@ -8,7 +8,7 @@ const slider = () => {
           let endCounter = 1;
 
           let count = window.innerWidth > 576 ? 2 : 1;
-          console.log(count);
+          // console.log(count);
         
           let arrSlide = Array.from(slides);
           
@@ -48,34 +48,43 @@ const slider = () => {
             
               if (e.target.closest('.services__arrow--right')) {
 
-                if(startCounter == arrSlide.length - count) {
+                if(startCounter >= arrSlide.length - count) {
                   startCounter = 0;
+                  // console.log('startCounter = 0')
                 } else {
                   startCounter += count;
+                  // console.log(startCounter,'startCounter')
                 }
+                
 
 
-                if(endCounter == arrSlide.length - 1) {
+                if(endCounter >= arrSlide.length - count) {
                   endCounter = 1;
+                  // console.log('endCounter = 1')
                 }else{
                   endCounter += count;
+                  // console.log(endCounter,'endCounter')
                 }
               }
 
 
               if (e.target.closest(".services__arrow--left")) {
                 
-                if(startCounter == 0) {
+                if(startCounter <= count - 1) {
                   startCounter = arrSlide.length - count;
+                  // console.log(startCounter,'startCounter')
                 } else {
                   startCounter -= count;
+                  // console.log(startCounter,'startCounter')
                 }
 
 
-                if(endCounter == 1) {
+                if(endCounter <= count - 1) {
                   endCounter = arrSlide.length - 1;
+                  // console.log(endCounter,'endCounter')
                 }else{
                   endCounter -= count;
+                  // console.log(endCounter,'endCounter')
                 }
                 
               
