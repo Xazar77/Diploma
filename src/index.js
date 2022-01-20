@@ -18,7 +18,7 @@ import reviews from './modules/reviews';
 modalRequest();
 modalFroze();
 slider();
-timer('18 january 2022 18:15:00.000');
+timer('26 january 2022 22:32:00.000');
 swiper();
 
 smoothScroll();

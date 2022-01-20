@@ -8,20 +8,25 @@ const timer = (deadline) => {
         timerMinutes = document.querySelectorAll('.count_3 span'),
         timerSeconds = document.querySelectorAll('.count_4 span'),
         countdownText = document.querySelectorAll('.countdown-text');
-        
+    
+    
+    
     let idInterval;
 
     const getTimeRemaining = () => {
  
         let dateStop = new Date(deadline).getTime();
         let dateNow = new Date().getTime();
-
+        
         let timeRemaining = (dateStop - dateNow) / 1000;
- 
         let day = Math.floor(timeRemaining / 60 / 60 / 24);
         let hours = Math.floor(timeRemaining / (60 * 60) % 24); // 3. из минут получаем часы
         let minutes = Math.floor((timeRemaining / 60) % 60); // 2. из секунд получаем минуты
         let seconds = Math.floor(timeRemaining % 60); // 1. округляем полученное количество милисекунд до целочисленного
+
+
+        
+
 
         return { timeRemaining, day, hours, minutes, seconds};
    

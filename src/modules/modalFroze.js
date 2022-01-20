@@ -14,13 +14,28 @@ const modalFroze = () => {
             overlay.style.display = 'block';
         });
     });
-    closeBtn.addEventListener('click', () => {
+
+    function closeModal() {
         modal.style.display = 'none';
         overlay.style.display = 'none';
-    });
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    
 
 
 
+    document.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Escape') {
+                closeModal();
+            }
+        });
 
 
 
