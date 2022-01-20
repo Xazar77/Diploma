@@ -2,33 +2,32 @@ const reviews = () => {
 
     const reviews = document.getElementById('reviews');
     const blockComment = reviews.querySelector('.row');
+
     let timer;
-    // let renderItemArr = [];
-    // console.log(renderItemArr)
+
+    const statusImg = document.createElement('img');
+    const loadText = 'images/Animation.png';
+    statusImg.style.cssText = `
+    display: block;
+    margin: 0 auto;
+    text-align:center;
+`;
+    statusImg.src = loadText;
+    blockComment.append(statusImg);
 
     const getData = (url) => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+              
                 const {comments} = data
                 
-                //  let renderItemArr = data.comments;
-                // console.log(renderItemArr)
-                // showReviews(comments);
-                // renderItemArr.push(arr);
-                // console.log(renderItemArr)
-                // arr.forEach(item => {
-                //     console.log(item)
-                //     renderItemArr.push(item);
-                // });
-                
-                // renderComment(renderItemArr);
+               
                timer = setInterval(() => {
                     showReviews(comments);
-                }, 1000);
+                }, 10000);
             
-                // console.log(data)
+                
             })
             .catch(error => console.log(error));
     };
@@ -37,8 +36,10 @@ const reviews = () => {
 
 
     const renderComment = (data) => {
+        blockComment.innerHTML = '';
         
-        console.log(data);
+       
+        // console.log(data);
         data.forEach((item, index) => {
             // console.log(item)
             let { id, image, author, comment } = item;
@@ -106,29 +107,25 @@ const reviews = () => {
                 `;
             }
           
-            // renderItemArr.push(item);
-            // localStorage.setItem('comment', JSON.stringify(renderItemArr));
+            
             blockComment.append(div);
-            clearInterval(timer);
+           
         });
         
     };
 
 
     function showReviews(data) {
-            
-        
-
         const item = data.shift(data[0]);
-        // console.log(item)
+       
         data.push(item);
-       console.log(data);
-                renderComment(data);
+      
+        renderComment(data);
        
                 
     }
 
-    // showReviews();
+  
 
 
 };
